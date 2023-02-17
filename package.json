@@ -35,11 +35,14 @@
     "usb": "^1.9.2"
   },
   "devDependencies": {
-    "jshint": "^2.13.6"
+    "jshint": "^2.13.6",
+    "node-abi": "3.33.0",
+    "tar-stream": "3.0.0"
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build --update-binary",
-    "test": "jshint lib/*.js && node test.js"
+    "test": "jshint lib/*.js && node test.js",
+    "gen-prebuilds": "node ./generate-prebuilds.mjs"
   },
   "binary": {
     "module_name": "bluetooth_hci_socket",
